@@ -1,0 +1,121 @@
+*{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+}
+
+:root{
+        --light: rgb(255, 255, 255);
+        --dark: rgb(31, 31, 44);
+        --darkdark: rgb(52, 52, 72);
+}
+
+body{
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        background-color: var(--darkdark);
+        color: var(--light);
+        position: relative;
+        height: 100vh;
+}
+
+.container{
+        padding: 5% 15%;
+}
+
+.date{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+}
+
+.inputSection{
+        display: flex;
+        padding: 2rem 0rem;
+}
+
+.input{
+        border: none;
+}
+
+.divider{
+        border: 1px solid white;
+}
+
+.list{
+        margin: 2rem 0rem;
+        padding: 2rem;
+        background-color: var(--dark);
+        border-radius: 10px;
+}
+
+.header{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+}
+
+.list-item{
+        display: flex;
+        align-items: center;
+        position: relative;
+}
+
+.list-item>p{
+        margin-bottom: 0;
+        width: 100%;
+        padding: 2px;
+        padding-left: 10px;
+        border: 2px solid white;
+        border-radius: 25px;
+        text-shadow: 1px 1px 1rem black;
+}
+
+.buttons{
+        position: absolute;
+        right: 0;
+}
+
+.btn{
+        color: white;
+        letter-spacing: .1rem;
+        border: none;
+        transition: all .2s;
+}
+
+.buttons>.btn:hover{
+        font-size: large;
+}
+
+
+.addNewTask>button{
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+        background-color: var(--dark);
+        border-radius: 25px;
+}
+
+@media(max-width: 1000px){
+        .container{
+                padding: 10%;
+        }
+}
+
+@media(max-width: 800px){
+        .container{
+                padding: 5%;
+        }
+        .list{
+                padding: 1rem;
+        }
+        .list-item{
+                margin: 1rem;
+                flex-direction: column;
+        }
+        .list-item>p{
+                text-align: center;
+        }
+        .buttons{
+                position: relative;
+        }
+}
